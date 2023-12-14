@@ -1,0 +1,50 @@
+{% extends "head.html" %}
+{% load static %}
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+
+{% block titulo %}
+Login | Vision
+{% endblock %}
+
+{% block typenav %}
+{% include "navbar.html" %}
+{% endblock %}
+
+{% block body %}
+<div class="container-criar">
+        <form>
+            <h1>Login</h1>
+            <div class="teste">
+                <input type="email" id="email"> {% comment %}required{% endcomment %}
+                <label for="email">Email</label>
+            </div>
+            <div class="teste">
+                 <input type="password" id="password"> {% comment %}required{% endcomment %}
+                <label for="password">Senha</label>
+            </div>
+            <a href="{% url 'streaming:inicio' %}">
+                <button class="btn-criar">Entrar</button>
+            </a>
+            <div class="baixo-btn">
+                <div class="lado-esquerdo">
+                    <input type="checkbox"><span>Lembre-se de mim</span>
+                </div>
+                <a href="/">
+                    <span>Precisa de ajuda?</span>
+                </a>
+            </div>
+            <div class="opcao-baixo">
+                <span>Não possui uma conta?</span>
+                <a href="{% url 'streaming:registrar' %}">
+                   <p>Crie agora</p> 
+                </a>
+            </div>
+        </form>
+    </div>
+    
+</div>
+{% endblock %}

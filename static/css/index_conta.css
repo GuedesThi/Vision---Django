@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background: linear-gradient(133deg, rgba(0,0,0,1) 0%, rgba(81,35,110,1) 53%, rgba(85,23,122,1) 57%, rgba(0,0,0,1) 100%);
+    background-repeat: no-repeat;
+    max-height: auto;
+    max-width: 100vw;
+}
+
+/*----------------------------------------------*/
+
+nav {
+    max-width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo > img {
+    width: 8rem;
+}
+
+.right-side {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.opcao-idioma {
+    display: flex;
+    align-items: center;
+    border: 1px solid #b10be4;
+    padding: 0.4rem 0.7rem;
+    gap: 0.2rem;
+    border-radius: 8px;
+}
+
+svg {
+    color: #ffffff;
+}
+
+select {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+option {
+    color: black;
+    font-family: sans-serif;
+}
+
+.login {
+    color: #ffffff;
+    background: transparent;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    margin-right: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.5s;
+    border: 1px solid #b10be4;
+    cursor: pointer;
+}
+
+.login:hover {
+    background: #45026E;
+    border: 2px solid #9700F6;
+    padding: 0.8rem 1.2rem;
+}
+
+/*----------------------------------------------*/
+
+.container-index {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+.centralizar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(24, 24, 24, 0.6);
+    padding: 1rem 0;
+    border-radius: 8px;
+}
+
+hr {
+    max-width: 90%;
+}
+
+.thumb-filmes {
+    width: 14rem;
+    height: 16rem;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.titulo-filme-index {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.descricao-index {
+    font-size: 1.3rem;
+    max-width: 50%;
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
+}

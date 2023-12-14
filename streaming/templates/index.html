@@ -1,0 +1,42 @@
+{% extends "head.html" %}
+{% load static %}
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block titulo %}
+Entrar | Vision
+{% endblock %}
+
+{% block typenav %}
+{% include "navbar.html" %}
+{% endblock %}
+
+
+{% block body %}
+    <div class="container-index">
+        <div class="index-filmes">
+            <img src="{% static 'images/Netflix.jpg' %}">
+        </div>
+        <h1>
+            Filmes, séries e 
+            <br>
+            muito mais, sem
+            <br>
+            limites
+        </h1>
+        <p>A partir de R$ 18,90. Cancele quando quiser.</p>
+        <span>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura</span>
+
+        <div class="input-email">
+            <div class="teste">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <a href="{% url 'streaming:registrar' %}">
+                <button class="vamos">Vamos lá</button>
+            </a>
+        </div>
+    </div>
+{% endblock %}

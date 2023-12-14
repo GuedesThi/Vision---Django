@@ -1,0 +1,42 @@
+{% extends "head.html" %}
+{% load static %}
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'css/detalhes.css' %}">
+{% endblock %}
+
+{% block titulo %}
+Filme | Vision
+{% endblock %}
+
+{% block typenav %}
+{% include "navbar_conta.html" %}
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="fundo">
+      <img class="play-icon" src="{% static 'images/play.png' %}" >
+      <img class="solto" src="{{object.thumb.url}}">
+    </div>
+
+    <div class="titulo-descricao">
+      <h1>{{object}}</h1>
+      <p>{{object.descricao}}</p>
+    </div>
+    
+    <div class="categoria">
+      <span>CATEGORIA: {{object.categoria}}</span>
+    </div>
+
+    <div class="container-episodios">
+      {% for ep in object.episodios.all %}
+      <h3>Episódios:</h3>
+      <a href="{{ep.video}}">
+        <h3>Ep {{forloop.counter}}: {{ep}}</h3>
+      </a>
+      {% endfor %}
+    </div>
+    
+{% endblock %}
